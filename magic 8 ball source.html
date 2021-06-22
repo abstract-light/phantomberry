@@ -1,0 +1,166 @@
+<html>
+<head>
+
+<style>
+
+h4{
+text-align: center;
+color: black;
+font-family: "Courier New"
+font-size: 20px;
+
+}
+
+h3{
+text-align: center;
+color: black;
+font-family: "Courier New"
+font-size: 20px;
+
+}
+
+h2{
+text-align: center;
+color: white;
+font-family: "Courier New"
+font-size: 50px;
+
+}
+
+
+.center-block {
+  margin: auto;
+  display: block;
+}
+
+
+body {
+  background-color: grey
+
+
+}
+
+
+
+input[type=text], select {
+  width: 50%;
+  height: 50px;
+  border: 1px solid #ccc;
+  border-radius: 100px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 47%;
+  height: 25px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+h1{
+  text-align: center;
+  color: #7E28FF;
+  font-family: "Lucida Handwriting"
+}
+
+</style>
+
+
+<script>
+pre=1
+function validateForm() {
+  var x = document.forms["myForm"]["fname"].value;
+  var x1="1"
+  if (x1 == "1") {
+  if (pre== x) {
+  alert("did you think repeating your question would do anything");
+  return false;
+  }
+  if (x== "") {
+  alert("look for me to answer a question you have to ask one dont leave it blank please do that for me");
+  return false;
+  }
+    a1=Math.floor(Math.random() * 11);     // returns a random integer from 0 to 9
+    if (a1  == "0"){
+    a2="yes "
+    }
+    if (a1  == "1"){
+    a2="no "
+    }
+    if (a1  == "2"){
+    a2="maybe "
+    }
+    if (a1  == "3"){
+    a2="i dont know "
+    }
+    if (a1  == "4"){
+    a2="try again "
+    pre=""
+    }
+
+    if (a1  == "5"){
+    a2="why are you asking me "
+    }
+ 
+    if (a1  == "6"){
+    a2="thats for me to know and you to find out "
+    }
+
+    if (a1  == "7"){
+    a2="google it im on smoke'o  "
+    }
+
+    if (a1  == "8"){
+    a2="defiently "
+    }
+
+    if (a1  == "9"){
+    a2="never "
+    }
+
+
+    if (a1  == "10"){
+    a2="dont make me laugh "
+    }
+
+
+    pre=x
+    x1=" "
+    b="the answer to your question: "
+    b1="is "
+    document.getElementById("t1").innerHTML = b+x+x1+b1;
+    document.getElementById("demo").innerHTML = a2;
+    return false;
+  }
+}
+</script>
+</head>
+<body>
+<h1>THE MAGIC 8-BALL</h1> 
+<div>
+<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+  <input class="center-block" type="text" name="fname" placeholder="ask me a question">
+  <input class="center-block" type="submit" value="Submit">
+</form>
+</div>
+<h3 id="t1"></h3>
+<h4 id="demo"></h4>
+<svg height="150" width="150">
+  <circle cx="80" cy="80" r="60" stroke="black" stroke-width="3" fill="black" />
+  <circle cx="100" cy="60" r="25" stroke="black" stroke-width="3" fill="white" />
+  <text x="89" y="75" font-size=50 fill="black">8</text>
+  
+  Sorry, your browser does not support inline SVG.  
+</svg> 
+
+
+</body>
+</html>
