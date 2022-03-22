@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Mobile Detection</title>
+    </head>
+    <body>
+    <input type="button" OnClick="a1()" value="Am I an Iphone?" />
+    <input type="button" id="AndroidLink" value="android link" OnClick="intent://www.google.com/#Intent;scheme=http;package=com.android.chrome;end">
+    <input type="button" id="IosLink" OnClick="document.location='googlechromes://www.google.com'" value="Ios link" />
+    </body>
+</html>
+<script>
+function a()
+{
+alert("incomptible android web client was detected now attempting to fix issue please use link below to open in comptible client if page dose not autoload");
+
+}
+
+function i()
+{
+alert("incomptible ios web client was detected now attempting to fix issue please use link below to open in comptible client if page dose not autoload");   
+}
+
+function w()
+{
+alert ("windows");
+window.open('microsoft-edge:https://www.google.com/');
+document.getElementById("AndroidLink").click();
+}
+
+function a1()
+{
+var uagent = navigator.userAgent.toLowerCase();
+if (uagent.search("windows") > -1)
+{
+w()
+} 
+else if (uagent.search("android") > -1)
+{
+a()
+}
+else if (uagent.search("iphone") > -1)
+{
+i()
+}
+else
+alert("incomptible web client was detected site dose not work");   
+}
+</script>
